@@ -8,3 +8,4 @@ class Trainer():
     instagram = models.URLField()
     facebook = models.URLField()
     twitter = models.URLField()
+    image = models.ImageField(upload_to='my_images/')
