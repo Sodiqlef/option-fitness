@@ -1,11 +1,14 @@
 from django.db import models
-from cloudinary import CloudinaryImage
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
-class Trainer():
+class Trainer(models.Model):
     name = models.CharField(max_length=255)
     instagram = models.URLField()
     facebook = models.URLField()
     twitter = models.URLField()
-    image = models.ImageField(upload_to='my_images/')
+    image = CloudinaryField("image")
+
+    def __str__(self):
+        return self.name
