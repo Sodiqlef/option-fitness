@@ -370,30 +370,17 @@ transition: opacity 0.3s ease;
 <div class="container mx-auto px-4">
 <h2 class="text-4xl font-bold text-center mb-12">Fitness Blog</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+{% for blog in blogs %}
 <article class="bg-white rounded-lg overflow-hidden shadow-lg">
-<img src="https://readdy.ai/api/search-image?query=healthy%20meal%20prep%20with%20fresh%20vegetables%20and%20lean%20protein%2C%20bright%20food%20photography&width=400&height=300&seq=7&orientation=landscape" alt="Nutrition Tips" class="w-full h-48 object-cover">
+<img src="{{blog.image.url}}" alt="Nutrition Tips" class="w-full h-48 object-cover">
 <div class="p-6">
-<h3 class="text-xl font-bold mb-2">Essential Nutrition Tips for Muscle Growth</h3>
-<p class="text-gray-600 mb-4">Discover the key nutrients and meal timing strategies to maximize your muscle building potential.</p>
+<h3 class="text-xl font-bold mb-2">{{blog.image.subject}}</h3>
+<p class="text-gray-600 mb-4">{{blog.message| slice":100"}}</p>
 <a href="#" class="text-primary hover:underline">Read More</a>
 </div>
-</article>
-<article class="bg-white rounded-lg overflow-hidden shadow-lg">
-<img src="https://readdy.ai/api/search-image?query=person%20doing%20high%20intensity%20workout%20in%20modern%20gym%2C%20dynamic%20action%20shot&width=400&height=300&seq=8&orientation=landscape" alt="HIIT Training" class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">The Ultimate HIIT Workout Guide</h3>
-<p class="text-gray-600 mb-4">Learn how to maximize fat burn and improve endurance with these effective HIIT training techniques.</p>
-<a href="#" class="text-primary hover:underline">Read More</a>
-</div>
-</article>
-<article class="bg-white rounded-lg overflow-hidden shadow-lg">
-<img src="https://readdy.ai/api/search-image?query=person%20meditating%20in%20peaceful%20yoga%20studio%20with%20natural%20light%2C%20wellness%20concept&width=400&height=300&seq=9&orientation=landscape" alt="Mental Wellness" class="w-full h-48 object-cover">
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Mental Wellness Through Exercise</h3>
-<p class="text-gray-600 mb-4">Explore how regular exercise can improve mental health and reduce stress levels.</p>
-<a href="#" class="text-primary hover:underline">Read More</a>
-</div>
-</article>
+{% endfor %}
+
 </div>
 </div>
 </section>
