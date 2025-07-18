@@ -57,7 +57,7 @@ opacity: 1;
 transition: opacity 0.3s ease;
 }
 .hero {
-    background-image: url("{% static 'images/unknown3.jpg' %}");
+    background-image: url("{% static 'img/unknown3.jpg' %}");
   }
 </style>
 </head>
@@ -65,7 +65,7 @@ transition: opacity 0.3s ease;
 <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
 <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
 <a href="#" class="h-12">
-<img src="{% static './options fitness logo.jpg' %}" alt="Fitness Options Logo" class="h-full">
+<img src="{% static 'img/options fitness logo.jpg' %}" alt="Fitness Options Logo" class="h-full">
 </a>
 <div class="hidden md:flex space-x-6">
 <a href="#home" class="hover:text-primary transition-colors">Home</a>
@@ -130,7 +130,7 @@ transition: opacity 0.3s ease;
 </div>
 </div>
 <div class="flex-1">
-<img src="./unknown1.jpg">
+<img src="{% static 'img/unknown1.jpg' %}">
 </div>
 </div>
 </div>
@@ -344,19 +344,19 @@ transition: opacity 0.3s ease;
 <h2 class="text-4xl font-bold text-center mb-12">Our Facilities</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <div class="relative group overflow-hidden rounded-lg">
-<img src="./cadio zone.jpg" alt="Cardio Zone" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+<img src="{% static 'img/cadio zone.jpg' %}" alt="Cardio Zone" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
 <h3 class="text-white text-xl font-bold">Cardio Zone</h3>
 </div>
 </div>
 <div class="relative group overflow-hidden rounded-lg">
-<img src="./weight training.jpg" alt="Weight Training" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+<img src="{% static 'img/weight training.jpg' %}" alt="Weight Training" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
 <h3 class="text-white text-xl font-bold">Weight Training</h3>
 </div>
 </div>
 <div class="relative group overflow-hidden rounded-lg">
-<img src="./yoga studio.jpg" alt="Yoga Studio" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
+<img src="{% static 'img/yoga studio.jpg' %}" alt="Yoga Studio" class="w-full h-64 object-cover rounded-lg transition-transform duration-300 group-hover:scale-110">
 <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
 <h3 class="text-white text-xl font-bold">Yoga Studio</h3>
 </div>
